@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add two prime numbers</title>
+	<script type="text/javascript">
+	function addPrimeNumbers(){
+		var tempNum1=0,tempNum2=0,i;
+		var num1=prompt("Enter a prime number:");
+		var num2=prompt("Enter another prime number:");
+		num1=parseInt(num1);
+		num2=parseInt(num2);
+		for(i=2;i<=num1/2;i++){
+			if(num1%i==0){
+				tempNum1=1;
+				break;
+			}
+		}
+		for(i=2;i<=num2/2;i++){
+			if(num2%i==0){
+				tempNum2=1;
+				break;
+			}
+		}
+		if(tempNum1==0 && tempNum2==0){
+			document.write("Sum="+(num1+num2));
+		}else{
+			document.write("Both numbers must be prime.");
+		}
+	}
+	</script>
+</head>
+<body onload="addPrimeNumbers()">
+</body>
+</html>

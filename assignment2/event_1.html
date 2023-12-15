@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Event</title>
+	<script type="text/javascript">
+		function load(){
+			alert("This is after the event onload.");
+		}
+		function result(){
+			document.write("You clicked,didn't you?");
+		}
+	</script>
+</head>
+<body onload="load()">
+	<form>
+	<input type="button" name="test" value="Do not click" onclick="result()">
+	</form>
+</body>
+</html>

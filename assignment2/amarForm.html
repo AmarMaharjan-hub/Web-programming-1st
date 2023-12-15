@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Validation</title>
+	<script type="text/javascript">
+			function formValidation(theForm){
+
+				if(theForm.customer.value.length<3){
+					alert("Please enter atleast 3 alphanumeric characters in name");
+					theForm.customer.focus();
+					return false;
+				}
+				var checkFor="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+				var checkWith=theForm.customer.value;
+				var checkValid=true;
+				for(i=0;i<theForm.customer.value.length;i++){
+					ch=theForm.customer.value.charAt(i);
+					for(j=0;j<checkFor.length;j++){
+
+						if(ch==checkFor.charAt(j)){
+								break;
+
+						}
+					}
+					if(j==checkFor.length){
+						checkValid=false;
+						return false;
+					}
+
+				}
+				if(!checkValid){
+					alert("Please enter alphanumeric characters only in name.");
+					theForm.customer.focus();
+					return false;
+				}
+				if(theForm.pswrd_1.value<5){
+					alert("Please enter atleast 5 characters in password.");
+					theForm.pswrd_1.focus();
+					return false;
+				}
+				if(theForm.pswrd_1.value!=theForm.pswrd_2.value){
+					alert("The password donot match.")
+					theForm.pswrd_2.focus();
+					return false;
+				}
+			}
+	</script>
+</head>
+<body>
+	<form method="post" name="form_1" onsubmit="formValidation(this)">
+		Name:<input type="text" size=50 name="customer" maxlength="25" placeholder="Plese enter atleast 3 alphanumeric character"><br>
+		Password:<input type="password" size=50 name="pswrd_1" placeholder="Enter password of length greater than 5"><br>
+		<strong>Please re-enter the password.</strong><br>
+		Password:<input type="password" name="pswrd_2"><br>
+		Gender: <input type="radio" name="gender" value="male" checked="checked">male   <input type="radio" name="gender" value="female">female   <br>
+		<input type="submit" name="submit" value="Submit">
+	</form>
+</body>
+</html>

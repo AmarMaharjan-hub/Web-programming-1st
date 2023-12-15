@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<script type="text/javascript">
+		
+			function submit(){
+			
+			alert("Form submitted sucessfully");
+			}
+			function mouseover(){
+			document.getElementById("heading1").style.color="yellow";
+			}
+			function mouseout(){
+			var a=document.getElementsByTagName("h1");
+			a[0].style.color="black";
+			}
+			function onLoadEvent(){
+			alert("This is onload event");
+			}
+			function onClickEvent(){
+			document.bgColor="lightgreen";
+			}
+
+		</script>
+	</head>
+	<body onsubmit="submit()" onload="onLoadEvent()">
+		<form method="post" name="form1">
+		<h1 id="heading1" onmouseover="mouseover()" onmouseout="mouseout()">Bring your pointer to this onmouseover and onmouseout event</h1>
+		First Name:<input type="text" name="firstName"/><br>
+		Last Name:<input type="text" name="lastName"/><br>
+		<input type="submit" value="submit"/><br>
+		<input type="button" value="change_color" onclick="onClickEvent()"/>
+		</form>
+	</body>
+</html>

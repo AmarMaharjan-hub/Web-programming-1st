@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>QNo65 c,d</title>
+	<script type="text/javascript">
+		function whenLoad(){
+			alert("After the event onload.");
+		}
+		function afterClick(){
+			document.write("After the event onclick.");
+		}
+	</script>
+</head>
+<body onload="whenLoad()">
+	<form>
+	<input type="button" name="click" value="Click me" onclick="afterClick()">
+	</form>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple Calculator</title>
+	<script type="text/javascript">
+		var num1,num2;
+		function getValue(){
+			num1=prompt("Enter first number.");
+			num2=prompt("Enter second number.");
+			num1=parseFloat(num1);
+			num2=parseFloat(num2);
+		}
+		function add(){
+			document.write("Sum: "+(num1+num2));
+		}
+		function sub(){
+			document.write("Difference: "+(num1-num2));
+		}
+		function mul(){
+			document.write("Product: "+(num1*num2));
+		}
+		function div(){
+			document.write("Division: "+(num1/num2));
+		}
+	</script>
+</head>
+<body onload="getValue()">
+	 	<form>
+			::Choose an action::<br>
+			<input type="button" value="Addition" onclick="add()"><br>
+			<input type="button" value="Subtraction" onclick="sub()"><br>
+			<input type="button" value="Multiplication" onclick="mul()"><br>
+			<input type="button" value="Division" onclick="div()"><br>
+		</form>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<title>Changing image</title>
+	</head>
+	<body>
+		Click the button to change image.<br>
+		<input type="button" onclick="changingImage()" value="Change"><br><br>
+		<img src="apple2c-big.jpg" id="change" width="250" height="250">
+		 <script>
+			function changingImage() {
+				var image = document.getElementById("change");
+				if (image.src.match("apple2c-big.jpg")) {
+					image.src = "Fourth-generation-computer.jpg";
+				}
+				else {
+					image.src ="apple2c-big.jpg";
+				}
+			}
+		</script>
+	</body>
+</html>

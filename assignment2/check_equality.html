@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>String equality</title>
+	<script type="text/javascript">
+		var str1,str2;
+		function getData(){
+			str1=prompt("Enter a string.");
+			str2=prompt("Enter another string.");
+		}
+		function checkEquality(string1,string2){
+			if(string1==string2){
+				var upr=string1.toUpperCase();
+				document.write("First string in uppercase:"+upr);
+			}else{
+				document.write("the two string donot match.");
+			}
+		}
+	</script>
+</head>
+<body onload="getData()">
+	<form>
+		<input type="button" value="Check_strings" onclick="checkEquality(str1,str2)">
+	</form>
+</body>
+</html>

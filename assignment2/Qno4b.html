@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Question 4(b)</title>
+	<script type="text/javascript">
+		function getConfirmation(){
+			var get=confirm("Continue?");
+			if(get==true){
+				document.write("User wants to continue!");
+				return true;
+			}
+			else{
+				document.write("User does not want to continue!");
+				return false;
+			}
+		}
+	</script>
+</head>
+<body>
+	<p>Click here to continue:</p>
+	<form>
+		<input type="button" value="Click me" onclick="getConfirmation()"/>
+	</form>
+</body>
+</html>
